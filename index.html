@@ -1,0 +1,2698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizza Dough Hydration Calculator &amp; Neapolitan Dough Ratio</title>
+  <meta
+    name="description"
+    content="Free pizza dough hydration calculator and Neapolitan pizza dough ratio calculator. Scale flour, water, salt, and yeast by baker's percentage in grams or ounces."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yourdomain.com/" />
+
+  <!-- Open Graph & Social Metadata -->
+  <meta property="og:title" content="Pizza Dough Hydration Calculator &amp; Neapolitan Dough Ratio" />
+  <meta
+    property="og:description"
+    content="Free pizza dough hydration calculator and Neapolitan pizza dough ratio calculator. Scale flour, water, salt, and yeast by baker's percentage in grams or ounces."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:site_name" content="DoughRatio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pizza Dough Hydration Calculator &amp; Neapolitan Dough Ratio" />
+  <meta
+    name="twitter:description"
+    content="Scale Neapolitan, New York, and Detroit pizza dough by exact baker's percentage in grams or ounces."
+  />
+
+  <!-- Custom Inline SVG Favicon -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FAF8F5'/%3E%3Cpath d='M12 19C24 11 40 11 52 19L32 54Z' fill='%23E3A857'/%3E%3Cpath d='M16.5 23.5C26 17.5 38 17.5 47.5 23.5L32 50Z' fill='%23C83E2B'/%3E%3Ccircle cx='28' cy='29' r='3.5' fill='%23FAF8F5'/%3E%3Ccircle cx='37' cy='31' r='3.2' fill='%23FAF8F5'/%3E%3Ccircle cx='32' cy='40' r='3' fill='%23FAF8F5'/%3E%3C/svg%3E"
+  />
+
+  <!-- Schema.org Structured Data: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "DoughRatio Pizza Dough Hydration Calculator",
+    "url": "https://yourdomain.com/",
+    "applicationCategory": "UtilitiesApplication",
+    "applicationSubCategory": "Food",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "description": "Free pizza dough hydration calculator and Neapolitan pizza dough ratio calculator using baker's percentages to scale flour, water, salt, yeast, olive oil, and sugar in grams or ounces.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Schema.org Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best hydration percentage for Neapolitan pizza dough?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Traditional Neapolitan pizza dough sits between 60% and 65% hydration. If you are baking in an 850°F to 900°F wood-fired oven, Ooni, or Roccbox with Italian Tipo 00 flour, 62% to 65% gives you an airy, blistered rim without turning sticky on the peel. For a 500°F home oven, bump hydration to 65%–68% so the crust stays tender during a longer bake."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does a pizza dough hydration calculator use baker's percentages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In baker's math, total flour weight is always 100%, and every other ingredient is expressed as a percentage of that flour weight. For example, 65% hydration means 65 grams of water for every 100 grams of flour. To hit an exact target dough weight—like four 250g balls totaling 1,000g—the calculator divides total dough weight by the sum of all percentages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use Tipo 00 flour or high-protein bread flour in a home oven?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use high-protein bread flour (around 12.5% to 13% protein, like King Arthur Bread Flour) in a standard home oven that tops out at 500°F–550°F. Unmalted Italian Tipo 00 flour is milled for 850°F+ decks and stays pale and cracker-like in a home oven unless you add diastatic malt or a little sugar. Save pure Tipo 00 for high-heat outdoor pizza ovens."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I convert between instant dry, active dry, and fresh yeast?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the standard 1 : 1.25 : 3 ratio by weight. If a recipe calls for 1 gram of instant dry yeast (IDY), swap in 1.25 grams of active dry yeast (ADY) or 3 grams of fresh cake yeast. Selecting a different yeast type in the calculator above adjusts the percentage automatically so your fermentation timing stays consistent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does this neapolitan pizza dough ratio calculator leave out oil and sugar by default?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "True Neapolitan dough uses only four ingredients: flour, water, salt, and yeast. At 850°F–900°F, added sugar scorches before the center bakes through and olive oil softens the crisp char. When you switch to the New York or Detroit preset—or turn them on in Custom mode—oil and sugar come back in to help browning and tenderness at 500°F–550°F."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #FAF8F5;
+      --surface: #FFFFFF;
+      --surface-warm: #F3EFE8;
+      --surface-hover: #EDE7DD;
+      --text: #1E1E1E;
+      --text-secondary: #57524C;
+      --text-muted: #706A62;
+      --accent: #C83E2B;
+      --accent-hover: #AB3221;
+      --accent-soft: #FBF0EE;
+      --border: #E5DFD5;
+      --border-strong: #D2C9BC;
+      --shadow-sm: 0 1px 2px rgba(30, 30, 30, 0.04);
+      --shadow-card: 0 8px 24px -10px rgba(30, 24, 18, 0.08), 0 1px 3px rgba(30, 24, 18, 0.04);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    button, input, select {
+      font: inherit;
+      color: inherit;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--text);
+      color: #FFFFFF;
+      padding: 10px 16px;
+      border-radius: 0 0 var(--radius-sm) 0;
+      z-index: 100;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .skip-link:focus {
+      left: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header: Strict 3-zone top bar */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      min-height: 68px;
+      padding: 12px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1.125rem;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .brand:hover {
+      color: var(--text);
+    }
+
+    .brand svg {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding: 6px 0;
+      transition: color 150ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      text-decoration: underline;
+    }
+
+    .header-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 16px;
+      min-height: 40px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color 150ms ease, border-color 150ms ease;
+    }
+
+    .header-action:hover {
+      background: var(--surface-warm);
+      border-color: var(--text-muted);
+    }
+
+    /* Hero Intro */
+    .hero {
+      padding: 36px 0 24px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.85rem, 3.2vw, 2.65rem);
+      line-height: 1.14;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      text-wrap: balance;
+      max-width: 26ch;
+    }
+
+    .hero-lead {
+      margin: 0;
+      max-width: 68ch;
+      color: var(--text-secondary);
+      font-size: 1.025rem;
+      line-height: 1.58;
+    }
+
+    /* Calculator Workspace */
+    .calc-section {
+      padding: 8px 0 56px;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+    }
+
+    .controls-panel {
+      padding: 28px;
+    }
+
+    .panel-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .section-label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 0;
+    }
+
+    /* Segmented Unit Switch */
+    .unit-toggle {
+      display: inline-flex;
+      padding: 3px;
+      background: var(--surface-warm);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      gap: 2px;
+    }
+
+    .unit-btn {
+      border: 0;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 7px 14px;
+      min-height: 36px;
+      border-radius: 7px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
+    }
+
+    .unit-btn:hover {
+      color: var(--text);
+    }
+
+    .unit-btn[aria-pressed="true"] {
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Preset Selector */
+    .preset-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.28fr) minmax(0, 0.92fr);
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .preset-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 2px;
+      padding: 10px 11px;
+      min-height: 54px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+      transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease;
+    }
+
+    .preset-btn:hover {
+      border-color: var(--border-strong);
+      background: var(--surface-warm);
+    }
+
+    .preset-btn[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .preset-name {
+      font-size: 0.84375rem;
+      font-weight: 600;
+      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    .preset-btn[aria-pressed="true"] .preset-name {
+      color: var(--accent);
+    }
+
+    .preset-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .divider {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 22px 0;
+    }
+
+    /* Form Controls */
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .field label,
+    .field-heading {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .field-hint {
+      font-size: 0.8125rem;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    .input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .num-input,
+    .select-input {
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 12px;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.96875rem;
+      font-variant-numeric: tabular-nums;
+      transition: border-color 150ms ease, box-shadow 150ms ease;
+    }
+
+    .num-input.has-suffix {
+      padding-right: 32px;
+    }
+
+    .num-input:hover,
+    .select-input:hover {
+      border-color: var(--text-muted);
+    }
+
+    .num-input:focus,
+    .select-input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(200, 62, 43, 0.14);
+    }
+
+    .input-suffix {
+      position: absolute;
+      right: 12px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    /* Stepper for Dough Balls */
+    .stepper {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) 44px;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--surface);
+      transition: border-color 150ms ease, box-shadow 150ms ease;
+    }
+
+    .stepper:focus-within {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(200, 62, 43, 0.14);
+    }
+
+    .stepper-btn {
+      border: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 1.125rem;
+      font-weight: 600;
+      cursor: pointer;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 120ms ease;
+    }
+
+    .stepper-btn:hover {
+      background: var(--surface-warm);
+    }
+
+    .stepper-btn:active {
+      background: var(--surface-hover);
+    }
+
+    .stepper input {
+      border: 0;
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      text-align: center;
+      width: 100%;
+      min-height: 44px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      background: var(--surface);
+    }
+
+    .stepper input:focus {
+      outline: none;
+    }
+
+    /* Quick Weight Chips */
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 2px;
+    }
+
+    .chip-btn {
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text-secondary);
+      border-radius: 7px;
+      padding: 6px 11px;
+      min-height: 36px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease;
+    }
+
+    .chip-btn:hover {
+      background: var(--surface-warm);
+      color: var(--text);
+      border-color: var(--border-strong);
+    }
+
+    .chip-btn[aria-pressed="true"] {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Hydration Slider Control */
+    .hydration-block {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hydration-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .hydration-number-box {
+      width: 104px;
+      flex-shrink: 0;
+    }
+
+    .hydration-number-box .num-input {
+      font-weight: 700;
+      text-align: right;
+      padding-right: 30px;
+    }
+
+    .range-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--surface-warm);
+      border: 1px solid var(--border);
+      cursor: pointer;
+    }
+
+    .range-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid #FFFFFF;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      transition: transform 120ms ease, background-color 120ms ease;
+    }
+
+    .range-slider::-webkit-slider-thumb:hover {
+      background: var(--accent-hover);
+      transform: scale(1.06);
+    }
+
+    .range-slider::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid #FFFFFF;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+    }
+
+    .slider-scale {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+      margin-top: -2px;
+    }
+
+    /* Salt & Yeast Grid */
+    .salt-yeast-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr) minmax(0, 0.85fr);
+      gap: 14px;
+      align-items: end;
+    }
+
+    /* Optional Enrichments (Oil & Sugar) */
+    .optional-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .optional-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .optional-item {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .checkbox-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+      min-height: 28px;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent);
+      cursor: pointer;
+      margin: 0;
+    }
+
+    .optional-item.is-disabled .num-input {
+      background: var(--surface-warm);
+      color: var(--text-muted);
+      border-color: var(--border);
+    }
+
+    /* Recipe Output Card */
+    .recipe-panel {
+      padding: 28px;
+      position: sticky;
+      top: 24px;
+    }
+
+    .recipe-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .recipe-title {
+      margin: 0 0 4px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    .recipe-meta {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .recipe-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .recipe-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .recipe-item.is-hidden {
+      display: none;
+    }
+
+    .ing-left {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .ing-name {
+      font-size: 0.96875rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .ing-pct {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .ing-right {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .ing-weight {
+      font-size: 1.1875rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      display: block;
+    }
+
+    .ing-vol {
+      font-size: 0.78125rem;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+      display: block;
+      margin-top: 1px;
+    }
+
+    .recipe-total {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0 4px;
+    }
+
+    .total-label {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .total-weight {
+      font-size: 1.375rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    /* Dynamic Dough Feel & Baking Tip */
+    .tip-box {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-radius: var(--radius-md);
+      background: var(--surface-warm);
+      border: 1px solid var(--border);
+    }
+
+    .tip-heading {
+      margin: 0 0 6px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .tip-level {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .tip-body {
+      margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+
+    .tip-enrichment {
+      margin: 8px 0 0;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+
+    /* Actions Row */
+    .recipe-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .btn-primary {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 11px 20px;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius-sm);
+      background: var(--accent);
+      color: #FFFFFF;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 150ms ease, border-color 150ms ease, transform 120ms ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+
+    .btn-primary:active {
+      transform: translateY(1px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 11px 18px;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 150ms ease, border-color 150ms ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface-warm);
+      border-color: var(--text-muted);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Content Sections */
+    .content-section {
+      padding: 52px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-header {
+      margin-bottom: 26px;
+      max-width: 68ch;
+    }
+
+    .section-header h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.45rem, 2.3vw, 1.85rem);
+      line-height: 1.22;
+      letter-spacing: -0.025em;
+      font-weight: 700;
+      text-wrap: balance;
+    }
+
+    .section-header p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+    }
+
+    /* Hydration Reference Table */
+    .table-wrap {
+      overflow-x: auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      min-width: 680px;
+    }
+
+    thead th {
+      background: var(--surface-warm);
+      color: var(--text);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    tbody td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    tbody tr:hover {
+      background: #FDFBF8;
+    }
+
+    .td-hydration {
+      font-weight: 700;
+      color: var(--text);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .td-style {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .td-temp {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .apply-row-btn {
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      min-height: 34px;
+      border-radius: 6px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: border-color 140ms ease, color 140ms ease, background-color 140ms ease;
+    }
+
+    .apply-row-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    /* Editorial Practical Guide */
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .guide-col h3 {
+      margin: 0 0 10px;
+      font-size: 1.0625rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--text);
+    }
+
+    .guide-col p {
+      margin: 0 0 12px;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
+    .guide-col p:last-child {
+      margin-bottom: 0;
+    }
+
+    .formula-note {
+      margin-top: 28px;
+      padding: 18px 22px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .formula-note p {
+      margin: 0;
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+    }
+
+    .formula-code {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--text);
+      background: var(--surface-warm);
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* FAQ Accordion */
+    .faq-list {
+      max-width: 780px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+      font-size: 1.03125rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary:hover {
+      color: var(--accent);
+    }
+
+    .faq-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--text-muted);
+      transition: transform 180ms ease;
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(45deg);
+      color: var(--accent);
+    }
+
+    .faq-answer {
+      margin: 0 0 20px;
+      padding-right: 28px;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.68;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 40px;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+      text-decoration: underline;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 920px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .recipe-panel {
+        position: static;
+      }
+
+      .guide-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .hero {
+        padding: 24px 0 18px;
+      }
+
+      .controls-panel,
+      .recipe-panel {
+        padding: 20px;
+      }
+
+      .preset-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .field-row,
+      .salt-yeast-grid,
+      .optional-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .optional-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+      }
+
+      .recipe-actions {
+        flex-direction: column;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *, *::before, *::after {
+        transition: none !important;
+      }
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF;
+      }
+      .site-header,
+      .hero,
+      .controls-panel,
+      .recipe-actions,
+      .content-section,
+      .site-footer {
+        display: none !important;
+      }
+      .calc-grid {
+        display: block;
+      }
+      .recipe-panel {
+        border: 0;
+        box-shadow: none;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#calculator" class="skip-link">Skip to pizza dough calculator</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" id="top">
+        <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="#F3EFE8" />
+          <path d="M12 19C24 11 40 11 52 19L32 54Z" fill="#E3A857" />
+          <path d="M16.5 23.5C26 17.5 38 17.5 47.5 23.5L32 50Z" fill="#C83E2B" />
+          <circle cx="28" cy="29" r="3.5" fill="#FAF8F5" />
+          <circle cx="37" cy="31" r="3.2" fill="#FAF8F5" />
+          <circle cx="32" cy="40" r="3" fill="#FAF8F5" />
+        </svg>
+        <span>DoughRatio</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#calculator">Calculator</a>
+        <a href="#hydration-chart">Hydration Chart</a>
+        <a href="#neapolitan-guide">Neapolitan Guide</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <button type="button" class="header-action" id="printRecipeBtn">Print Recipe</button>
+    </div>
+  </header>
+
+  <main id="calculator">
+    <section class="hero">
+      <div class="container">
+        <h1>Pizza Dough Hydration Calculator</h1>
+        <p class="hero-lead">
+          Dial in exact flour, water, salt, and yeast weights by baker's percentage. Pick a preset or use this neapolitan pizza dough ratio calculator to scale any batch in grams or ounces for a home oven, baking steel, or 900&deg;F deck.
+        </p>
+      </div>
+    </section>
+
+    <section class="calc-section" aria-label="Interactive pizza dough calculator">
+      <div class="container">
+        <div class="calc-grid">
+          <!-- Left Column: Inputs -->
+          <div class="panel controls-panel">
+            <div class="panel-header-row">
+              <h2 class="section-label">Pizza Style Preset</h2>
+              <div class="unit-toggle" role="group" aria-label="Measurement unit">
+                <button type="button" class="unit-btn" id="unitGramsBtn" data-unit="g" aria-pressed="true">Grams (g)</button>
+                <button type="button" class="unit-btn" id="unitOuncesBtn" data-unit="oz" aria-pressed="false">Ounces (oz)</button>
+              </div>
+            </div>
+
+            <div class="preset-grid" role="group" aria-label="Pizza style presets">
+              <button type="button" class="preset-btn" data-preset="neapolitan" aria-pressed="true">
+                <span class="preset-name">Neapolitan</span>
+                <span class="preset-meta">65% · 4 ing.</span>
+              </button>
+              <button type="button" class="preset-btn" data-preset="ny" aria-pressed="false">
+                <span class="preset-name">New York</span>
+                <span class="preset-meta">63% · Oil/Sugar</span>
+              </button>
+              <button type="button" class="preset-btn" data-preset="detroit" aria-pressed="false">
+                <span class="preset-name">Detroit / Sicilian</span>
+                <span class="preset-meta">72% · Pan style</span>
+              </button>
+              <button type="button" class="preset-btn" data-preset="custom" aria-pressed="false">
+                <span class="preset-name">Custom</span>
+                <span class="preset-meta">Your ratio</span>
+              </button>
+            </div>
+
+            <hr class="divider" />
+
+            <!-- Dough Balls & Weight -->
+            <div class="field-row">
+              <div class="field">
+                <label for="ballsInput">Dough Balls</label>
+                <div class="stepper">
+                  <button type="button" class="stepper-btn" id="ballsDecBtn" aria-label="Decrease dough balls">&minus;</button>
+                  <input
+                    type="number"
+                    id="ballsInput"
+                    min="1"
+                    max="100"
+                    step="1"
+                    value="4"
+                    inputmode="numeric"
+                  />
+                  <button type="button" class="stepper-btn" id="ballsIncBtn" aria-label="Increase dough balls">+</button>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="ballWeightInput">
+                  <span>Weight per Ball</span>
+                  <span class="field-hint" id="ballSizeHint">12&Prime; Neapolitan pie</span>
+                </label>
+                <div class="input-wrap">
+                  <input
+                    type="number"
+                    id="ballWeightInput"
+                    class="num-input has-suffix"
+                    min="50"
+                    max="2000"
+                    step="1"
+                    value="250"
+                    inputmode="decimal"
+                  />
+                  <span class="input-suffix" id="ballWeightSuffix">g</span>
+                </div>
+                <div class="chip-row" role="group" aria-label="Quick dough ball weights">
+                  <button type="button" class="chip-btn" data-weight-g="220" aria-pressed="false">220g</button>
+                  <button type="button" class="chip-btn" data-weight-g="250" aria-pressed="true">250g</button>
+                  <button type="button" class="chip-btn" data-weight-g="280" aria-pressed="false">280g</button>
+                  <button type="button" class="chip-btn" data-weight-g="300" aria-pressed="false">300g</button>
+                </div>
+              </div>
+            </div>
+
+            <hr class="divider" />
+
+            <!-- Hydration Slider & Numeric Input -->
+            <div class="hydration-block">
+              <div class="hydration-top">
+                <div class="field" style="gap: 2px;">
+                  <label for="hydrationInput">Hydration (Water %)</label>
+                  <span class="field-hint">Water weight relative to total flour weight</span>
+                </div>
+                <div class="input-wrap hydration-number-box">
+                  <input
+                    type="number"
+                    id="hydrationInput"
+                    class="num-input has-suffix"
+                    min="50"
+                    max="85"
+                    step="0.5"
+                    value="65"
+                    inputmode="decimal"
+                    aria-label="Hydration percentage"
+                  />
+                  <span class="input-suffix">%</span>
+                </div>
+              </div>
+              <input
+                type="range"
+                id="hydrationSlider"
+                class="range-slider"
+                min="50"
+                max="85"
+                step="0.5"
+                value="65"
+                aria-label="Hydration percentage slider"
+              />
+              <div class="slider-scale" aria-hidden="true">
+                <span>50% Stiff</span>
+                <span>62% Classic</span>
+                <span>72% Pan</span>
+                <span>85% Wet</span>
+              </div>
+            </div>
+
+            <hr class="divider" />
+
+            <!-- Salt & Yeast -->
+            <div class="salt-yeast-grid">
+              <div class="field">
+                <label for="saltInput">
+                  <span>Salt %</span>
+                  <span class="field-hint">2.5%&ndash;3%</span>
+                </label>
+                <div class="input-wrap">
+                  <input
+                    type="number"
+                    id="saltInput"
+                    class="num-input has-suffix"
+                    min="0"
+                    max="5"
+                    step="0.1"
+                    value="2.8"
+                    inputmode="decimal"
+                  />
+                  <span class="input-suffix">%</span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="yeastTypeSelect">Yeast Type</label>
+                <select id="yeastTypeSelect" class="select-input">
+                  <option value="idy" selected>Instant Dry (IDY)</option>
+                  <option value="ady">Active Dry (ADY)</option>
+                  <option value="fresh">Fresh Cake Yeast</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="yeastInput">Yeast %</label>
+                <div class="input-wrap">
+                  <input
+                    type="number"
+                    id="yeastInput"
+                    class="num-input has-suffix"
+                    min="0"
+                    max="5"
+                    step="0.05"
+                    value="0.2"
+                    inputmode="decimal"
+                  />
+                  <span class="input-suffix">%</span>
+                </div>
+              </div>
+            </div>
+
+            <hr class="divider" />
+
+            <!-- Optional Oil & Sugar -->
+            <div class="optional-header">
+              <span class="section-label">Optional Enrichments</span>
+              <span class="field-hint">0% for Neapolitan &middot; on for NY &amp; Detroit</span>
+            </div>
+            <div class="optional-grid">
+              <div class="optional-item is-disabled" id="oilBox">
+                <label class="checkbox-label" for="oilToggle">
+                  <input type="checkbox" id="oilToggle" />
+                  <span>Extra-Virgin Olive Oil</span>
+                </label>
+                <div class="input-wrap">
+                  <input
+                    type="number"
+                    id="oilInput"
+                    class="num-input has-suffix"
+                    min="0"
+                    max="10"
+                    step="0.5"
+                    value="0"
+                    disabled
+                    inputmode="decimal"
+                    aria-label="Olive oil percentage"
+                  />
+                  <span class="input-suffix">%</span>
+                </div>
+              </div>
+
+              <div class="optional-item is-disabled" id="sugarBox">
+                <label class="checkbox-label" for="sugarToggle">
+                  <input type="checkbox" id="sugarToggle" />
+                  <span>Sugar / Diastatic Malt</span>
+                </label>
+                <div class="input-wrap">
+                  <input
+                    type="number"
+                    id="sugarInput"
+                    class="num-input has-suffix"
+                    min="0"
+                    max="8"
+                    step="0.5"
+                    value="0"
+                    disabled
+                    inputmode="decimal"
+                    aria-label="Sugar percentage"
+                  />
+                  <span class="input-suffix">%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Live Recipe Card -->
+          <aside class="panel recipe-panel" aria-label="Calculated dough recipe">
+            <div class="recipe-head">
+              <div>
+                <h2 class="recipe-title" id="recipeTitle">Neapolitan Pizza Dough</h2>
+                <p class="recipe-meta" id="recipeSummary">4 dough balls &middot; 250 g each &middot; 65% hydration</p>
+              </div>
+            </div>
+
+            <ul class="recipe-list" id="recipeList">
+              <li class="recipe-item">
+                <div class="ing-left">
+                  <span class="ing-name">Flour</span>
+                  <span class="ing-pct">100%</span>
+                </div>
+                <div class="ing-right">
+                  <span class="ing-weight" id="outFlour">595 g</span>
+                  <span class="ing-vol" id="volFlour"></span>
+                </div>
+              </li>
+              <li class="recipe-item">
+                <div class="ing-left">
+                  <span class="ing-name">Water</span>
+                  <span class="ing-pct" id="pctWater">65%</span>
+                </div>
+                <div class="ing-right">
+                  <span class="ing-weight" id="outWater">387 g</span>
+                  <span class="ing-vol" id="volWater"></span>
+                </div>
+              </li>
+              <li class="recipe-item">
+                <div class="ing-left">
+                  <span class="ing-name">Fine Sea Salt</span>
+                  <span class="ing-pct" id="pctSalt">2.8%</span>
+                </div>
+                <div class="ing-right">
+                  <span class="ing-weight" id="outSalt">16.7 g</span>
+                  <span class="ing-vol" id="volSalt"></span>
+                </div>
+              </li>
+              <li class="recipe-item">
+                <div class="ing-left">
+                  <span class="ing-name" id="outYeastLabel">Instant Dry Yeast</span>
+                  <span class="ing-pct" id="pctYeast">0.2%</span>
+                </div>
+                <div class="ing-right">
+                  <span class="ing-weight" id="outYeast">1.2 g</span>
+                  <span class="ing-vol" id="volYeast"></span>
+                </div>
+              </li>
+              <li class="recipe-item is-hidden" id="rowOil">
+                <div class="ing-left">
+                  <span class="ing-name">Olive Oil</span>
+                  <span class="ing-pct" id="pctOil">0%</span>
+                </div>
+                <div class="ing-right">
+                  <span class="ing-weight" id="outOil">0 g</span>
+                  <span class="ing-vol" id="volOil"></span>
+                </div>
+              </li>
+              <li class="recipe-item is-hidden" id="rowSugar">
+                <div class="ing-left">
+                  <span class="ing-name">Sugar</span>
+                  <span class="ing-pct" id="pctSugar">0%</span>
+                </div>
+                <div class="ing-right">
+                  <span class="ing-weight" id="outSugar">0 g</span>
+                  <span class="ing-vol" id="volSugar"></span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="recipe-total">
+              <span class="total-label">Total Dough Weight</span>
+              <span class="total-weight" id="outTotal">1,000 g</span>
+            </div>
+
+            <div class="tip-box" role="status" aria-live="polite">
+              <p class="tip-heading">
+                <span id="tipTitle">Balanced All-Purpose Dough</span>
+                <span class="tip-level" id="tipRange">65% hydration</span>
+              </p>
+              <p class="tip-body" id="tipBody">
+                Soft, extensible, and slightly tacky right after mixing before smoothing out during a 20-minute rest. Works reliably on a 500&deg;F&ndash;550&deg;F baking steel or an 850&deg;F Ooni or Roccbox.
+              </p>
+              <p class="tip-enrichment" id="tipEnrichment" hidden></p>
+            </div>
+
+            <div class="recipe-actions">
+              <button type="button" class="btn-primary" id="copyRecipeBtn">Copy Recipe</button>
+              <button type="button" class="btn-secondary" id="resetBtn">Reset</button>
+            </div>
+            <span class="sr-only" id="copyStatus" aria-live="polite"></span>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hydration Reference Table -->
+    <section class="content-section" id="hydration-chart">
+      <div class="container">
+        <div class="section-header">
+          <h2>Pizza Dough Hydration Reference Chart (55% to 80%)</h2>
+          <p>
+            Hydration changes how dough feels in your hands and how fast it bakes. Match your water percentage to both your flour's protein content and your oven's top temperature.
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Hydration</th>
+                <th scope="col">Best Pizza Style</th>
+                <th scope="col">Flour Match</th>
+                <th scope="col">Dough Feel &amp; Handling</th>
+                <th scope="col">Oven Temp</th>
+                <th scope="col">Load</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-hydration">55%&ndash;58%</td>
+                <td class="td-style">Tavern Style &amp; Roman Tonda</td>
+                <td>All-purpose or medium-protein Tipo 00 (11%&ndash;12%)</td>
+                <td>Firm, dry, easy to roll thin with a pin; crisp, snappy bite.</td>
+                <td class="td-temp">500&deg;F&ndash;550&deg;F</td>
+                <td><button type="button" class="apply-row-btn" data-apply-hydration="57">Use 57%</button></td>
+              </tr>
+              <tr>
+                <td class="td-hydration">59%&ndash;62%</td>
+                <td class="td-style">Classic Neapolitan (AVPN)</td>
+                <td>Italian Tipo 00 (W260&ndash;W280, ~12.5% protein)</td>
+                <td>Smooth, supple, holds tension well; launches cleanly off wood or metal peels.</td>
+                <td class="td-temp">850&deg;F&ndash;900&deg;F</td>
+                <td><button type="button" class="apply-row-btn" data-apply-hydration="61">Use 61%</button></td>
+              </tr>
+              <tr>
+                <td class="td-hydration">63%&ndash;66%</td>
+                <td class="td-style">New York &amp; Modern Neapolitan</td>
+                <td>High-protein bread flour (12.7%) or strong Tipo 00</td>
+                <td>Slightly tacky at mix, silky after cold fermentation; foldable with crisp undercarriage.</td>
+                <td class="td-temp">500&deg;F&ndash;850&deg;F</td>
+                <td><button type="button" class="apply-row-btn" data-apply-hydration="65">Use 65%</button></td>
+              </tr>
+              <tr>
+                <td class="td-hydration">67%&ndash;70%</td>
+                <td class="td-style">Canotto &amp; Artisan Home-Oven Pies</td>
+                <td>Strong bread flour (12.7%&ndash;13.5% protein)</td>
+                <td>Soft and slack; rewards gentle coil folds with big, puffy cornicione rims.</td>
+                <td class="td-temp">525&deg;F&ndash;800&deg;F</td>
+                <td><button type="button" class="apply-row-btn" data-apply-hydration="68">Use 68%</button></td>
+              </tr>
+              <tr>
+                <td class="td-hydration">71%&ndash;75%</td>
+                <td class="td-style">Detroit &amp; Sicilian Pan Pizza</td>
+                <td>High-protein bread flour (13%+ protein)</td>
+                <td>Sticky on the bench; press into a well-oiled steel pan for an airy crumb and fried base.</td>
+                <td class="td-temp">450&deg;F&ndash;500&deg;F</td>
+                <td><button type="button" class="apply-row-btn" data-apply-hydration="73">Use 73%</button></td>
+              </tr>
+              <tr>
+                <td class="td-hydration">76%&ndash;80%</td>
+                <td class="td-style">Roman Pizza al Taglio &amp; Focaccia</td>
+                <td>Very strong bread flour or Manitoba blend (13.5%+)</td>
+                <td>Wet and shaggy at mixing; needs cold water, stand mixer or wet-hand folds, and pan baking.</td>
+                <td class="td-temp">475&deg;F&ndash;525&deg;F</td>
+                <td><button type="button" class="apply-row-btn" data-apply-hydration="78">Use 78%</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practical Baking Guide -->
+    <section class="content-section" id="neapolitan-guide">
+      <div class="container">
+        <div class="section-header">
+          <h2>How to Use This Neapolitan Pizza Dough Ratio Calculator</h2>
+          <p>
+            Consistent pizza starts on a digital kitchen scale. Once you work in baker's percentages instead of cups, scaling from two Friday night pies to a twelve-pie backyard party takes ten seconds.
+          </p>
+        </div>
+
+        <div class="guide-grid">
+          <article class="guide-col">
+            <h3>1. Match Hydration to Your Oven</h3>
+            <p>
+              High-heat pizza ovens like an Ooni or Roccbox bake a 250g pie in 60 to 90 seconds, so moisture barely evaporates. Keeping hydration at 60%&ndash;65% prevents a gummy center and keeps the dough easy to launch.
+            </p>
+            <p>
+              In a standard American home oven capped at 500&deg;F&ndash;550&deg;F, a bake takes 5 to 7 minutes. Raising hydration to 65%&ndash;68% offsets that longer bake time and keeps the crumb light on a preheated baking steel.
+            </p>
+          </article>
+
+          <article class="guide-col">
+            <h3>2. Pick the Right Flour Strength</h3>
+            <p>
+              Not every flour drinks water the same way. Standard all-purpose flour (10.5%&ndash;11.5% protein) starts feeling soupy above 65%. Italian Tipo 00 milled for long ferments (like Caputo Pizzeria or Red) handles 60%&ndash;65% cleanly.
+            </p>
+            <p>
+              If you push past 68% hydration for Detroit pans or airy home-oven pies, switch to a 12.7%+ high-protein bread flour. The extra gluten builds structure so the dough holds gas instead of slumping flat.
+            </p>
+          </article>
+
+          <article class="guide-col">
+            <h3>3. Plan Your Cold Fermentation</h3>
+            <p>
+              The default 0.2% instant dry yeast is tuned for a 24- to 48-hour cold ferment in a 38&deg;F&ndash;40&deg;F refrigerator. Long, slow fermentation relaxes gluten for effortless hand-stretching and builds complex flavor.
+            </p>
+            <p>
+              Making same-day dough at room temperature (70&deg;F&ndash;72&deg;F)? Bump instant yeast up to 0.4%&ndash;0.6%, bulk ferment for 2 hours, ball the dough, and give it 4 to 5 hours in a covered proofing box before stretching.
+            </p>
+          </article>
+        </div>
+
+        <div class="formula-note">
+          <p>
+            <strong>Baker's percentage math behind the calculator:</strong> Flour is always 100%, and every other ingredient scales from flour weight to hit your exact batch total.
+          </p>
+          <code class="formula-code">Flour = Total Dough Weight &divide; (1 + Water% + Salt% + Yeast% + Oil% + Sugar%)</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Quick answers to the dough ratio, flour, and yeast questions home pizza makers ask most.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>
+              <span>What is the best hydration percentage for Neapolitan pizza dough?</span>
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="10" y1="4" x2="10" y2="16" />
+                <line x1="4" y1="10" x2="16" y2="10" />
+              </svg>
+            </summary>
+            <p class="faq-answer">
+              Traditional Neapolitan pizza dough sits between 60% and 65% hydration. If you are baking in an 850&deg;F to 900&deg;F wood-fired oven, Ooni, or Roccbox with Italian Tipo 00 flour, 62% to 65% gives you an airy, blistered rim without turning sticky on the peel. For a 500&deg;F home oven, bump hydration to 65%&ndash;68% so the crust stays tender during a longer bake.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>How does a pizza dough hydration calculator use baker's percentages?</span>
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="10" y1="4" x2="10" y2="16" />
+                <line x1="4" y1="10" x2="16" y2="10" />
+              </svg>
+            </summary>
+            <p class="faq-answer">
+              In baker's math, total flour weight is always 100%, and every other ingredient is expressed as a percentage of that flour weight. For example, 65% hydration means 65 grams of water for every 100 grams of flour. To hit an exact target dough weight&mdash;like four 250g balls totaling 1,000g&mdash;the calculator divides total dough weight by the sum of all percentages.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Should I use Tipo 00 flour or high-protein bread flour in a home oven?</span>
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="10" y1="4" x2="10" y2="16" />
+                <line x1="4" y1="10" x2="16" y2="10" />
+              </svg>
+            </summary>
+            <p class="faq-answer">
+              Use high-protein bread flour (around 12.5% to 13% protein, like King Arthur Bread Flour) in a standard home oven that tops out at 500&deg;F&ndash;550&deg;F. Unmalted Italian Tipo 00 flour is milled for 850&deg;F+ decks and stays pale and cracker-like in a home oven unless you add diastatic malt or a little sugar. Save pure Tipo 00 for high-heat outdoor pizza ovens.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>How do I convert between instant dry, active dry, and fresh yeast?</span>
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="10" y1="4" x2="10" y2="16" />
+                <line x1="4" y1="10" x2="16" y2="10" />
+              </svg>
+            </summary>
+            <p class="faq-answer">
+              Use the standard 1 : 1.25 : 3 ratio by weight. If a recipe calls for 1 gram of instant dry yeast (IDY), swap in 1.25 grams of active dry yeast (ADY) or 3 grams of fresh cake yeast. Selecting a different yeast type in the calculator above adjusts the percentage automatically so your fermentation timing stays consistent.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Why does this neapolitan pizza dough ratio calculator leave out oil and sugar by default?</span>
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="10" y1="4" x2="10" y2="16" />
+                <line x1="4" y1="10" x2="16" y2="10" />
+              </svg>
+            </summary>
+            <p class="faq-answer">
+              True Neapolitan dough uses only four ingredients: flour, water, salt, and yeast. At 850&deg;F&ndash;900&deg;F, added sugar scorches before the center bakes through and olive oil softens the crisp char. When you switch to the New York or Detroit preset&mdash;or turn them on in Custom mode&mdash;oil and sugar come back in to help browning and tenderness at 500&deg;F&ndash;550&deg;F.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p style="margin: 0;">&copy; <span id="footerYear">2026</span> DoughRatio. Weigh your ingredients on a digital scale for repeatable results.</p>
+      <div class="footer-links">
+        <a href="#calculator">Calculator</a>
+        <a href="#hydration-chart">Hydration Chart</a>
+        <a href="#neapolitan-guide">Guide</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var GRAMS_PER_OUNCE = 28.349523125;
+
+      var YEAST_META = {
+        idy: { label: 'Instant Dry Yeast', factor: 1.0, gramsPerTsp: 3.1 },
+        ady: { label: 'Active Dry Yeast', factor: 1.25, gramsPerTsp: 2.8 },
+        fresh: { label: 'Fresh Cake Yeast', factor: 3.0, gramsPerTsp: 4.5 }
+      };
+
+      var PRESETS = {
+        neapolitan: {
+          title: 'Neapolitan Pizza Dough',
+          ballWeightG: 250,
+          hydration: 65,
+          salt: 2.8,
+          yeastIdy: 0.2,
+          oilEnabled: false,
+          oil: 0,
+          sugarEnabled: false,
+          sugar: 0
+        },
+        ny: {
+          title: 'New York Style Pizza Dough',
+          ballWeightG: 280,
+          hydration: 63,
+          salt: 2.5,
+          yeastIdy: 0.4,
+          oilEnabled: true,
+          oil: 2.5,
+          sugarEnabled: true,
+          sugar: 1.5
+        },
+        detroit: {
+          title: 'Detroit / Sicilian Pan Dough',
+          ballWeightG: 300,
+          hydration: 72,
+          salt: 2.5,
+          yeastIdy: 0.5,
+          oilEnabled: true,
+          oil: 3.0,
+          sugarEnabled: true,
+          sugar: 1.0
+        },
+        custom: {
+          title: 'Custom Pizza Dough',
+          ballWeightG: 250,
+          hydration: 65,
+          salt: 2.8,
+          yeastIdy: 0.2,
+          oilEnabled: true,
+          oil: 2.0,
+          sugarEnabled: true,
+          sugar: 1.0
+        }
+      };
+
+      function clamp(value, min, max, fallback) {
+        var n = Number(value);
+        if (!Number.isFinite(n)) return fallback;
+        if (n < min) return min;
+        if (n > max) return max;
+        return n;
+      }
+
+      function roundTo(value, decimals) {
+        var mult = Math.pow(10, decimals);
+        return Math.round((value + Number.EPSILON) * mult) / mult;
+      }
+
+      function convertYeastPercentage(currentPct, fromType, toType) {
+        var fromFactor = (YEAST_META[fromType] || YEAST_META.idy).factor;
+        var toFactor = (YEAST_META[toType] || YEAST_META.idy).factor;
+        var scaled = (clamp(currentPct, 0, 5, 0.2) / fromFactor) * toFactor;
+        return roundTo(clamp(scaled, 0, 5, 0.2), 2);
+      }
+
+      function calculateDoughRecipe(input) {
+        var balls = Math.round(clamp(input.balls, 1, 100, 4));
+        var ballWeightG = clamp(input.ballWeightG, 50, 2000, 250);
+        var hydration = clamp(input.hydration, 50, 85, 65);
+        var salt = clamp(input.salt, 0, 5, 2.8);
+        var yeast = clamp(input.yeast, 0, 5, 0.2);
+        var oil = input.oilEnabled ? clamp(input.oil, 0, 10, 0) : 0;
+        var sugar = input.sugarEnabled ? clamp(input.sugar, 0, 8, 0) : 0;
+
+        var totalDoughG = balls * ballWeightG;
+        var totalPct = 100 + hydration + salt + yeast + oil + sugar;
+        var flourG = totalDoughG / (totalPct / 100);
+
+        return {
+          balls: balls,
+          ballWeightG: ballWeightG,
+          totalDoughG: totalDoughG,
+          totalPct: totalPct,
+          percentages: {
+            flour: 100,
+            water: hydration,
+            salt: salt,
+            yeast: yeast,
+            oil: oil,
+            sugar: sugar
+          },
+          grams: {
+            flour: flourG,
+            water: flourG * (hydration / 100),
+            salt: flourG * (salt / 100),
+            yeast: flourG * (yeast / 100),
+            oil: flourG * (oil / 100),
+            sugar: flourG * (sugar / 100),
+            total: totalDoughG
+          }
+        };
+      }
+
+      function getHydrationTip(hydration, oilPct, sugarPct) {
+        var title = '';
+        var body = '';
+
+        if (hydration < 58) {
+          title = 'Stiff, Low-Hydration Dough';
+          body = 'Easy to roll thin without sticking. Great for tavern-style or Roman tonda pies baked at 500\u00b0F\u2013550\u00b0F. Give it a 30-minute bench rest before rolling so the gluten relaxes.';
+        } else if (hydration <= 62.5) {
+          title = 'Classic Neapolitan Feel';
+          body = 'Smooth, firm, and forgiving to stretch by hand. Pairs cleanly with Italian Tipo 00 flour (W260\u2013W280) and launches easily into an 850\u00b0F\u2013900\u00b0F Ooni, Roccbox, or wood-fired oven.';
+        } else if (hydration <= 66.5) {
+          title = 'Balanced All-Purpose Dough';
+          body = 'Soft, extensible, and slightly tacky right after mixing before smoothing out during a 20-minute rest. Works reliably on a 500\u00b0F\u2013550\u00b0F baking steel or an 850\u00b0F outdoor pizza oven.';
+        } else if (hydration <= 70.5) {
+          title = 'Soft, Open-Crumb Dough';
+          body = 'Noticeably slack and airy, building puffed, blistered rims. Use high-protein bread flour (12.5%+) or strong Tipo 00, and use 2\u20133 gentle coil folds instead of heavy kneading.';
+        } else if (hydration <= 76) {
+          title = 'High-Hydration Pan Territory';
+          body = 'Sticky on the counter\u2014resist adding extra flour. Use high-protein bread flour (13%+) and press into a well-oiled Detroit or Sicilian pan at 450\u00b0F\u2013500\u00b0F for a light interior and crisp fried base.';
+        } else {
+          title = 'Very Wet Artisan Dough';
+          body = 'Above 76% hydration feels batter-like at first and requires strong bread flour (13%+ protein), cold water, and wet-hand coil folds. Best baked in oiled pans for Roman pizza al taglio or focaccia.';
+        }
+
+        var enrichment = '';
+        if (oilPct > 0 && sugarPct > 0) {
+          enrichment = 'With olive oil and sugar in the mix, keep oven heat around 500\u00b0F\u2013550\u00b0F\u2014above 700\u00b0F added sugar browns too fast.';
+        } else if (oilPct > 0) {
+          enrichment = 'Olive oil tenderizes the crumb and helps crisp the bottom crust in pans or on a 500\u00b0F\u2013550\u00b0F home baking steel.';
+        } else if (sugarPct > 0) {
+          enrichment = 'Sugar aids golden browning at home-oven temperatures (500\u00b0F\u2013550\u00b0F). Skip it if you are baking above 750\u00b0F.';
+        }
+
+        return { title: title, body: body, enrichment: enrichment };
+      }
+
+      function formatFraction(val) {
+        var whole = Math.floor(val);
+        var frac = val - whole;
+        var fractions = [
+          { n: 0, s: '' },
+          { n: 0.125, s: '\u215b' },
+          { n: 0.25, s: '\u00bc' },
+          { n: 0.333, s: '\u2153' },
+          { n: 0.5, s: '\u00bd' },
+          { n: 0.667, s: '\u2154' },
+          { n: 0.75, s: '\u00be' },
+          { n: 1, s: '' }
+        ];
+        var best = fractions[0];
+        var bestDiff = Infinity;
+        for (var i = 0; i < fractions.length; i++) {
+          var diff = Math.abs(frac - fractions[i].n);
+          if (diff < bestDiff) {
+            bestDiff = diff;
+            best = fractions[i];
+          }
+        }
+        if (best.n === 1) {
+          whole += 1;
+          best = fractions[0];
+        }
+        if (whole === 0 && best.s === '') {
+          return 'a pinch';
+        }
+        if (whole === 0) return best.s;
+        return best.s ? whole + best.s : String(whole);
+      }
+
+      function estimateVolume(ingredient, grams, yeastType) {
+        if (grams <= 0) return '';
+        if (ingredient === 'flour') {
+          var cups = grams / 125;
+          return '\u2248 ' + formatFraction(cups) + (cups >= 1.5 ? ' cups' : ' cup');
+        }
+        if (ingredient === 'water') {
+          var wCups = grams / 236.588;
+          return '\u2248 ' + formatFraction(wCups) + (wCups >= 1.5 ? ' cups' : ' cup');
+        }
+        if (ingredient === 'salt') {
+          var tsp = grams / 5.7;
+          if (tsp >= 3) {
+            var tbsp = tsp / 3;
+            return '\u2248 ' + formatFraction(tbsp) + ' tbsp';
+          }
+          return '\u2248 ' + formatFraction(tsp) + ' tsp';
+        }
+        if (ingredient === 'yeast') {
+          var meta = YEAST_META[yeastType] || YEAST_META.idy;
+          var yTsp = grams / meta.gramsPerTsp;
+          if (yTsp < 0.1) return '\u2248 a pinch';
+          if (yTsp >= 3) {
+            return '\u2248 ' + formatFraction(yTsp / 3) + ' tbsp';
+          }
+          return '\u2248 ' + formatFraction(yTsp) + ' tsp';
+        }
+        if (ingredient === 'oil') {
+          var oTbsp = grams / 13.5;
+          if (oTbsp < 0.5) return '\u2248 ' + formatFraction(oTbsp * 3) + ' tsp';
+          return '\u2248 ' + formatFraction(oTbsp) + ' tbsp';
+        }
+        if (ingredient === 'sugar') {
+          var sTsp = grams / 4.2;
+          if (sTsp >= 3) return '\u2248 ' + formatFraction(sTsp / 3) + ' tbsp';
+          return '\u2248 ' + formatFraction(sTsp) + ' tsp';
+        }
+        return '';
+      }
+
+      function formatWeight(grams, unit, kind) {
+        if (unit === 'oz') {
+          var oz = grams / GRAMS_PER_OUNCE;
+          var decimals = kind === 'micro' && oz < 1 ? 2 : (kind === 'small' ? 2 : 1);
+          return oz.toLocaleString('en-US', {
+            minimumFractionDigits: decimals,
+            maximumFractionDigits: decimals
+          }) + ' oz';
+        }
+        if (kind === 'major') {
+          if (grams < 10) {
+            return roundTo(grams, 1).toLocaleString('en-US', { maximumFractionDigits: 1 }) + ' g';
+          }
+          return Math.round(grams).toLocaleString('en-US') + ' g';
+        }
+        if (kind === 'micro') {
+          if (grams === 0) return '0 g';
+          var d = grams < 1 ? 2 : 1;
+          return grams.toLocaleString('en-US', {
+            minimumFractionDigits: d,
+            maximumFractionDigits: d
+          }) + ' g';
+        }
+        if (grams === 0) return '0 g';
+        return grams.toLocaleString('en-US', {
+          minimumFractionDigits: 1,
+          maximumFractionDigits: 1
+        }) + ' g';
+      }
+
+      function formatPct(pct) {
+        return Number(roundTo(pct, 2)) + '%';
+      }
+
+      function getBallSizeHint(ballWeightG) {
+        if (ballWeightG <= 230) return '10\u2033\u201311\u2033 personal pie';
+        if (ballWeightG <= 265) return '12\u2033 Neapolitan pie';
+        if (ballWeightG <= 290) return '13\u2033\u201314\u2033 NY-style pie';
+        if (ballWeightG <= 340) return '14\u2033\u201316\u2033 pie or 8\u00d710 pan';
+        return 'Large 16\u2033+ pie or full sheet pan';
+      }
+
+      // Expose pure math helpers for automated testing in non-DOM/VM checks if needed
+      if (typeof window !== 'undefined') {
+        window.__DOUGH_CALC__ = {
+          GRAMS_PER_OUNCE: GRAMS_PER_OUNCE,
+          PRESETS: PRESETS,
+          YEAST_META: YEAST_META,
+          calculateDoughRecipe: calculateDoughRecipe,
+          convertYeastPercentage: convertYeastPercentage,
+          getHydrationTip: getHydrationTip,
+          formatWeight: formatWeight,
+          estimateVolume: estimateVolume
+        };
+      }
+
+      if (typeof document === 'undefined') return;
+
+      var state = {
+        preset: 'neapolitan',
+        unit: 'g',
+        balls: 4,
+        ballWeightG: 250,
+        hydration: 65,
+        salt: 2.8,
+        yeastType: 'idy',
+        yeast: 0.2,
+        oilEnabled: false,
+        oil: 0,
+        sugarEnabled: false,
+        sugar: 0
+      };
+
+      // DOM References
+      var els = {
+        unitGramsBtn: document.getElementById('unitGramsBtn'),
+        unitOuncesBtn: document.getElementById('unitOuncesBtn'),
+        presetBtns: document.querySelectorAll('.preset-btn'),
+        ballsInput: document.getElementById('ballsInput'),
+        ballsDecBtn: document.getElementById('ballsDecBtn'),
+        ballsIncBtn: document.getElementById('ballsIncBtn'),
+        ballWeightInput: document.getElementById('ballWeightInput'),
+        ballWeightSuffix: document.getElementById('ballWeightSuffix'),
+        ballSizeHint: document.getElementById('ballSizeHint'),
+        weightChips: document.querySelectorAll('.chip-btn'),
+        hydrationInput: document.getElementById('hydrationInput'),
+        hydrationSlider: document.getElementById('hydrationSlider'),
+        saltInput: document.getElementById('saltInput'),
+        yeastTypeSelect: document.getElementById('yeastTypeSelect'),
+        yeastInput: document.getElementById('yeastInput'),
+        oilBox: document.getElementById('oilBox'),
+        oilToggle: document.getElementById('oilToggle'),
+        oilInput: document.getElementById('oilInput'),
+        sugarBox: document.getElementById('sugarBox'),
+        sugarToggle: document.getElementById('sugarToggle'),
+        sugarInput: document.getElementById('sugarInput'),
+        recipeTitle: document.getElementById('recipeTitle'),
+        recipeSummary: document.getElementById('recipeSummary'),
+        outFlour: document.getElementById('outFlour'),
+        volFlour: document.getElementById('volFlour'),
+        pctWater: document.getElementById('pctWater'),
+        outWater: document.getElementById('outWater'),
+        volWater: document.getElementById('volWater'),
+        pctSalt: document.getElementById('pctSalt'),
+        outSalt: document.getElementById('outSalt'),
+        volSalt: document.getElementById('volSalt'),
+        outYeastLabel: document.getElementById('outYeastLabel'),
+        pctYeast: document.getElementById('pctYeast'),
+        outYeast: document.getElementById('outYeast'),
+        volYeast: document.getElementById('volYeast'),
+        rowOil: document.getElementById('rowOil'),
+        pctOil: document.getElementById('pctOil'),
+        outOil: document.getElementById('outOil'),
+        volOil: document.getElementById('volOil'),
+        rowSugar: document.getElementById('rowSugar'),
+        pctSugar: document.getElementById('pctSugar'),
+        outSugar: document.getElementById('outSugar'),
+        volSugar: document.getElementById('volSugar'),
+        outTotal: document.getElementById('outTotal'),
+        tipTitle: document.getElementById('tipTitle'),
+        tipRange: document.getElementById('tipRange'),
+        tipBody: document.getElementById('tipBody'),
+        tipEnrichment: document.getElementById('tipEnrichment'),
+        copyRecipeBtn: document.getElementById('copyRecipeBtn'),
+        copyStatus: document.getElementById('copyStatus'),
+        resetBtn: document.getElementById('resetBtn'),
+        printRecipeBtn: document.getElementById('printRecipeBtn'),
+        applyRowBtns: document.querySelectorAll('.apply-row-btn'),
+        footerYear: document.getElementById('footerYear')
+      };
+
+      var copyTimeout = null;
+
+      function syncInputsFromState() {
+        // Units
+        els.unitGramsBtn.setAttribute('aria-pressed', String(state.unit === 'g'));
+        els.unitOuncesBtn.setAttribute('aria-pressed', String(state.unit === 'oz'));
+        els.ballWeightSuffix.textContent = state.unit;
+
+        if (state.unit === 'oz') {
+          els.ballWeightInput.min = '1.8';
+          els.ballWeightInput.max = '70';
+          els.ballWeightInput.step = '0.1';
+          els.ballWeightInput.value = String(roundTo(state.ballWeightG / GRAMS_PER_OUNCE, 1));
+        } else {
+          els.ballWeightInput.min = '50';
+          els.ballWeightInput.max = '2000';
+          els.ballWeightInput.step = '1';
+          els.ballWeightInput.value = String(Math.round(state.ballWeightG));
+        }
+
+        // Preset buttons
+        for (var i = 0; i < els.presetBtns.length; i++) {
+          var pBtn = els.presetBtns[i];
+          pBtn.setAttribute('aria-pressed', String(pBtn.getAttribute('data-preset') === state.preset));
+        }
+
+        // Ball count
+        els.ballsInput.value = String(state.balls);
+
+        // Quick weight chips
+        for (var j = 0; j < els.weightChips.length; j++) {
+          var chip = els.weightChips[j];
+          var gVal = Number(chip.getAttribute('data-weight-g'));
+          chip.textContent = state.unit === 'oz'
+            ? roundTo(gVal / GRAMS_PER_OUNCE, 1) + ' oz'
+            : gVal + 'g';
+          chip.setAttribute('aria-pressed', String(Math.abs(state.ballWeightG - gVal) < 0.6));
+        }
+
+        // Hydration
+        els.hydrationInput.value = String(state.hydration);
+        els.hydrationSlider.value = String(state.hydration);
+
+        // Salt & Yeast
+        els.saltInput.value = String(state.salt);
+        els.yeastTypeSelect.value = state.yeastType;
+        els.yeastInput.value = String(state.yeast);
+
+        // Optional Oil & Sugar
+        els.oilToggle.checked = state.oilEnabled;
+        els.oilInput.disabled = !state.oilEnabled;
+        els.oilInput.value = String(state.oilEnabled ? state.oil : 0);
+        els.oilBox.classList.toggle('is-disabled', !state.oilEnabled);
+
+        els.sugarToggle.checked = state.sugarEnabled;
+        els.sugarInput.disabled = !state.sugarEnabled;
+        els.sugarInput.value = String(state.sugarEnabled ? state.sugar : 0);
+        els.sugarBox.classList.toggle('is-disabled', !state.sugarEnabled);
+      }
+
+      function renderRecipe() {
+        var recipe = calculateDoughRecipe(state);
+        var presetMeta = PRESETS[state.preset] || PRESETS.custom;
+        var yeastMeta = YEAST_META[state.yeastType] || YEAST_META.idy;
+        var showVolume = state.unit === 'oz';
+
+        els.ballSizeHint.textContent = getBallSizeHint(recipe.ballWeightG);
+        els.recipeTitle.textContent = presetMeta.title;
+
+        var perBallStr = state.unit === 'oz'
+          ? roundTo(recipe.ballWeightG / GRAMS_PER_OUNCE, 1) + ' oz each'
+          : Math.round(recipe.ballWeightG) + ' g each';
+        var ballWord = recipe.balls === 1 ? 'dough ball' : 'dough balls';
+        els.recipeSummary.textContent =
+          recipe.balls + ' ' + ballWord + ' \u00b7 ' + perBallStr + ' \u00b7 ' + formatPct(recipe.percentages.water) + ' hydration';
+
+        els.outFlour.textContent = formatWeight(recipe.grams.flour, state.unit, 'major');
+        els.volFlour.textContent = showVolume ? estimateVolume('flour', recipe.grams.flour) : '';
+
+        els.pctWater.textContent = formatPct(recipe.percentages.water);
+        els.outWater.textContent = formatWeight(recipe.grams.water, state.unit, 'major');
+        els.volWater.textContent = showVolume ? estimateVolume('water', recipe.grams.water) : '';
+
+        els.pctSalt.textContent = formatPct(recipe.percentages.salt);
+        els.outSalt.textContent = formatWeight(recipe.grams.salt, state.unit, 'small');
+        els.volSalt.textContent = showVolume ? estimateVolume('salt', recipe.grams.salt) : '';
+
+        els.outYeastLabel.textContent = yeastMeta.label;
+        els.pctYeast.textContent = formatPct(recipe.percentages.yeast);
+        els.outYeast.textContent = formatWeight(recipe.grams.yeast, state.unit, 'micro');
+        els.volYeast.textContent = showVolume ? estimateVolume('yeast', recipe.grams.yeast, state.yeastType) : '';
+
+        var hasOil = state.oilEnabled && recipe.percentages.oil > 0;
+        els.rowOil.classList.toggle('is-hidden', !hasOil);
+        els.pctOil.textContent = formatPct(recipe.percentages.oil);
+        els.outOil.textContent = formatWeight(recipe.grams.oil, state.unit, 'small');
+        els.volOil.textContent = showVolume && hasOil ? estimateVolume('oil', recipe.grams.oil) : '';
+
+        var hasSugar = state.sugarEnabled && recipe.percentages.sugar > 0;
+        els.rowSugar.classList.toggle('is-hidden', !hasSugar);
+        els.pctSugar.textContent = formatPct(recipe.percentages.sugar);
+        els.outSugar.textContent = formatWeight(recipe.grams.sugar, state.unit, 'small');
+        els.volSugar.textContent = showVolume && hasSugar ? estimateVolume('sugar', recipe.grams.sugar) : '';
+
+        els.outTotal.textContent = formatWeight(recipe.grams.total, state.unit, 'major');
+
+        var tip = getHydrationTip(recipe.percentages.water, recipe.percentages.oil, recipe.percentages.sugar);
+        els.tipTitle.textContent = tip.title;
+        els.tipRange.textContent = formatPct(recipe.percentages.water) + ' hydration';
+        els.tipBody.textContent = tip.body;
+
+        if (tip.enrichment) {
+          els.tipEnrichment.textContent = tip.enrichment;
+          els.tipEnrichment.hidden = false;
+        } else {
+          els.tipEnrichment.textContent = '';
+          els.tipEnrichment.hidden = true;
+        }
+
+        // Update slider active track fill
+        var pctFill = ((state.hydration - 50) / (85 - 50)) * 100;
+        els.hydrationSlider.style.background =
+          'linear-gradient(to right, #C83E2B 0%, #C83E2B ' + pctFill + '%, #F3EFE8 ' + pctFill + '%, #F3EFE8 100%)';
+
+        // Update chip highlight state without disturbing active text inputs
+        for (var j = 0; j < els.weightChips.length; j++) {
+          var chip = els.weightChips[j];
+          var gVal = Number(chip.getAttribute('data-weight-g'));
+          chip.setAttribute('aria-pressed', String(Math.abs(state.ballWeightG - gVal) < 0.6));
+        }
+
+        // Update preset highlight
+        for (var i = 0; i < els.presetBtns.length; i++) {
+          var pBtn = els.presetBtns[i];
+          pBtn.setAttribute('aria-pressed', String(pBtn.getAttribute('data-preset') === state.preset));
+        }
+      }
+
+      function applyPreset(presetKey) {
+        var preset = PRESETS[presetKey];
+        if (!preset) return;
+        state.preset = presetKey;
+        if (presetKey !== 'custom') {
+          state.ballWeightG = preset.ballWeightG;
+          state.hydration = preset.hydration;
+          state.salt = preset.salt;
+          state.yeast = convertYeastPercentage(preset.yeastIdy, 'idy', state.yeastType);
+          state.oilEnabled = preset.oilEnabled;
+          state.oil = preset.oil;
+          state.sugarEnabled = preset.sugarEnabled;
+          state.sugar = preset.sugar;
+        } else {
+          // Clicking Custom keeps current hydration/salt/yeast and unlocks oil/sugar if both off
+          if (!state.oilEnabled && !state.sugarEnabled) {
+            state.oilEnabled = true;
+            state.oil = state.oil > 0 ? state.oil : 2.0;
+            state.sugarEnabled = true;
+            state.sugar = state.sugar > 0 ? state.sugar : 1.0;
+          }
+        }
+        syncInputsFromState();
+        renderRecipe();
+      }
+
+      function markCustomIfModified() {
+        if (state.preset !== 'custom') {
+          state.preset = 'custom';
+        }
+      }
+
+      function buildClipboardText() {
+        var recipe = calculateDoughRecipe(state);
+        var presetMeta = PRESETS[state.preset] || PRESETS.custom;
+        var yeastMeta = YEAST_META[state.yeastType] || YEAST_META.idy;
+        var perBallStr = state.unit === 'oz'
+          ? roundTo(recipe.ballWeightG / GRAMS_PER_OUNCE, 1) + ' oz'
+          : Math.round(recipe.ballWeightG) + ' g';
+
+        var lines = [
+          presetMeta.title,
+          recipe.balls + ' dough balls \u00d7 ' + perBallStr + ' (' + formatPct(recipe.percentages.water) + ' hydration)',
+          '----------------------------------------',
+          'Flour (100%): ' + formatWeight(recipe.grams.flour, state.unit, 'major'),
+          'Water (' + formatPct(recipe.percentages.water) + '): ' + formatWeight(recipe.grams.water, state.unit, 'major'),
+          'Salt (' + formatPct(recipe.percentages.salt) + '): ' + formatWeight(recipe.grams.salt, state.unit, 'small'),
+          yeastMeta.label + ' (' + formatPct(recipe.percentages.yeast) + '): ' + formatWeight(recipe.grams.yeast, state.unit, 'micro')
+        ];
+
+        if (state.oilEnabled && recipe.percentages.oil > 0) {
+          lines.push('Olive Oil (' + formatPct(recipe.percentages.oil) + '): ' + formatWeight(recipe.grams.oil, state.unit, 'small'));
+        }
+        if (state.sugarEnabled && recipe.percentages.sugar > 0) {
+          lines.push('Sugar (' + formatPct(recipe.percentages.sugar) + '): ' + formatWeight(recipe.grams.sugar, state.unit, 'small'));
+        }
+
+        lines.push('----------------------------------------');
+        lines.push('Total Dough Weight: ' + formatWeight(recipe.grams.total, state.unit, 'major'));
+        return lines.join('\n');
+      }
+
+      function copyRecipeToClipboard() {
+        var text = buildClipboardText();
+
+        function showCopiedFeedback() {
+          els.copyRecipeBtn.textContent = 'Copied!';
+          els.copyStatus.textContent = 'Recipe copied to clipboard.';
+          if (copyTimeout) clearTimeout(copyTimeout);
+          copyTimeout = setTimeout(function () {
+            els.copyRecipeBtn.textContent = 'Copy Recipe';
+            els.copyStatus.textContent = '';
+          }, 2000);
+        }
+
+        function fallbackCopy() {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            document.execCommand('copy');
+          } catch (err) {
+            // Clipboard blocked; still confirm action gracefully
+          }
+          document.body.removeChild(ta);
+          showCopiedFeedback();
+        }
+
+        if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+          navigator.clipboard.writeText(text).then(showCopiedFeedback, fallbackCopy);
+        } else {
+          fallbackCopy();
+        }
+      }
+
+      // Event Listeners
+      els.unitGramsBtn.addEventListener('click', function () {
+        if (state.unit === 'g') return;
+        state.unit = 'g';
+        syncInputsFromState();
+        renderRecipe();
+      });
+
+      els.unitOuncesBtn.addEventListener('click', function () {
+        if (state.unit === 'oz') return;
+        state.unit = 'oz';
+        syncInputsFromState();
+        renderRecipe();
+      });
+
+      for (var p = 0; p < els.presetBtns.length; p++) {
+        els.presetBtns[p].addEventListener('click', function (e) {
+          var key = e.currentTarget.getAttribute('data-preset');
+          applyPreset(key);
+        });
+      }
+
+      els.ballsDecBtn.addEventListener('click', function () {
+        state.balls = clamp(state.balls - 1, 1, 100, 4);
+        els.ballsInput.value = String(state.balls);
+        renderRecipe();
+      });
+
+      els.ballsIncBtn.addEventListener('click', function () {
+        state.balls = clamp(state.balls + 1, 1, 100, 4);
+        els.ballsInput.value = String(state.balls);
+        renderRecipe();
+      });
+
+      els.ballsInput.addEventListener('input', function () {
+        if (els.ballsInput.value === '') return;
+        state.balls = Math.round(clamp(els.ballsInput.value, 1, 100, 4));
+        renderRecipe();
+      });
+
+      els.ballsInput.addEventListener('blur', function () {
+        state.balls = Math.round(clamp(els.ballsInput.value, 1, 100, 4));
+        els.ballsInput.value = String(state.balls);
+        renderRecipe();
+      });
+
+      els.ballWeightInput.addEventListener('input', function () {
+        if (els.ballWeightInput.value === '') return;
+        var raw = Number(els.ballWeightInput.value);
+        if (!Number.isFinite(raw) || raw <= 0) return;
+        state.ballWeightG = state.unit === 'oz'
+          ? clamp(raw * GRAMS_PER_OUNCE, 50, 2000, 250)
+          : clamp(raw, 50, 2000, 250);
+        renderRecipe();
+      });
+
+      els.ballWeightInput.addEventListener('blur', function () {
+        var raw = Number(els.ballWeightInput.value);
+        state.ballWeightG = state.unit === 'oz'
+          ? clamp(raw * GRAMS_PER_OUNCE, 50, 2000, 250)
+          : clamp(raw, 50, 2000, 250);
+        els.ballWeightInput.value = state.unit === 'oz'
+          ? String(roundTo(state.ballWeightG / GRAMS_PER_OUNCE, 1))
+          : String(Math.round(state.ballWeightG));
+        renderRecipe();
+      });
+
+      for (var c = 0; c < els.weightChips.length; c++) {
+        els.weightChips[c].addEventListener('click', function (e) {
+          var gVal = Number(e.currentTarget.getAttribute('data-weight-g'));
+          state.ballWeightG = gVal;
+          els.ballWeightInput.value = state.unit === 'oz'
+            ? String(roundTo(gVal / GRAMS_PER_OUNCE, 1))
+            : String(gVal);
+          renderRecipe();
+        });
+      }
+
+      els.hydrationSlider.addEventListener('input', function () {
+        state.hydration = clamp(els.hydrationSlider.value, 50, 85, 65);
+        els.hydrationInput.value = String(state.hydration);
+        markCustomIfModified();
+        renderRecipe();
+      });
+
+      els.hydrationInput.addEventListener('input', function () {
+        if (els.hydrationInput.value === '') return;
+        var v = clamp(els.hydrationInput.value, 50, 85, 65);
+        state.hydration = v;
+        els.hydrationSlider.value = String(v);
+        markCustomIfModified();
+        renderRecipe();
+      });
+
+      els.hydrationInput.addEventListener('blur', function () {
+        state.hydration = clamp(els.hydrationInput.value, 50, 85, 65);
+        els.hydrationInput.value = String(state.hydration);
+        els.hydrationSlider.value = String(state.hydration);
+        renderRecipe();
+      });
+
+      els.saltInput.addEventListener('input', function () {
+        if (els.saltInput.value === '') return;
+        state.salt = clamp(els.saltInput.value, 0, 5, 2.8);
+        markCustomIfModified();
+        renderRecipe();
+      });
+
+      els.saltInput.addEventListener('blur', function () {
+        state.salt = clamp(els.saltInput.value, 0, 5, 2.8);
+        els.saltInput.value = String(state.salt);
+        renderRecipe();
+      });
+
+      els.yeastTypeSelect.addEventListener('change', function () {
+        var nextType = els.yeastTypeSelect.value;
+        state.yeast = convertYeastPercentage(state.yeast, state.yeastType, nextType);
+        state.yeastType = nextType;
+        els.yeastInput.value = String(state.yeast);
+        renderRecipe();
+      });
+
+      els.yeastInput.addEventListener('input', function () {
+        if (els.yeastInput.value === '') return;
+        state.yeast = clamp(els.yeastInput.value, 0, 5, 0.2);
+        markCustomIfModified();
+        renderRecipe();
+      });
+
+      els.yeastInput.addEventListener('blur', function () {
+        state.yeast = clamp(els.yeastInput.value, 0, 5, 0.2);
+        els.yeastInput.value = String(state.yeast);
+        renderRecipe();
+      });
+
+      els.oilToggle.addEventListener('change', function () {
+        state.oilEnabled = els.oilToggle.checked;
+        if (state.oilEnabled && state.oil === 0) {
+          state.oil = 2.0;
+        }
+        els.oilInput.disabled = !state.oilEnabled;
+        els.oilInput.value = String(state.oilEnabled ? state.oil : 0);
+        els.oilBox.classList.toggle('is-disabled', !state.oilEnabled);
+        markCustomIfModified();
+        renderRecipe();
+      });
+
+      els.oilInput.addEventListener('input', function () {
+        if (els.oilInput.value === '') return;
+        state.oil = clamp(els.oilInput.value, 0, 10, 0);
+        markCustomIfModified();
+        renderRecipe();
+      });
+
+      els.oilInput.addEventListener('blur', function () {
+        state.oil = clamp(els.oilInput.value, 0, 10, 0);
+        els.oilInput.value = String(state.oil);
+        renderRecipe();
+      });
+
+      els.sugarToggle.addEventListener('change', function () {
+        state.sugarEnabled = els.sugarToggle.checked;
+        if (state.sugarEnabled && state.sugar === 0) {
+          state.sugar = 1.0;
+        }
+        els.sugarInput.disabled = !state.sugarEnabled;
+        els.sugarInput.value = String(state.sugarEnabled ? state.sugar : 0);
+        els.sugarBox.classList.toggle('is-disabled', !state.sugarEnabled);
+        markCustomIfModified();
+        renderRecipe();
+      });
+
+      els.sugarInput.addEventListener('input', function () {
+        if (els.sugarInput.value === '') return;
+        state.sugar = clamp(els.sugarInput.value, 0, 8, 0);
+        markCustomIfModified();
+        renderRecipe();
+      });
+
+      els.sugarInput.addEventListener('blur', function () {
+        state.sugar = clamp(els.sugarInput.value, 0, 8, 0);
+        els.sugarInput.value = String(state.sugar);
+        renderRecipe();
+      });
+
+      els.copyRecipeBtn.addEventListener('click', copyRecipeToClipboard);
+
+      els.resetBtn.addEventListener('click', function () {
+        state.preset = 'neapolitan';
+        state.unit = 'g';
+        state.balls = 4;
+        state.ballWeightG = 250;
+        state.hydration = 65;
+        state.salt = 2.8;
+        state.yeastType = 'idy';
+        state.yeast = 0.2;
+        state.oilEnabled = false;
+        state.oil = 0;
+        state.sugarEnabled = false;
+        state.sugar = 0;
+        syncInputsFromState();
+        renderRecipe();
+      });
+
+      els.printRecipeBtn.addEventListener('click', function () {
+        window.print();
+      });
+
+      for (var r = 0; r < els.applyRowBtns.length; r++) {
+        els.applyRowBtns[r].addEventListener('click', function (e) {
+          var targetHydration = Number(e.currentTarget.getAttribute('data-apply-hydration'));
+          state.hydration = clamp(targetHydration, 50, 85, 65);
+          state.preset = 'custom';
+          syncInputsFromState();
+          renderRecipe();
+          var calcEl = document.getElementById('calculator');
+          if (calcEl && typeof calcEl.scrollIntoView === 'function') {
+            calcEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
+
+      if (els.footerYear) {
+        els.footerYear.textContent = String(new Date().getFullYear());
+      }
+
+      syncInputsFromState();
+      renderRecipe();
+    })();
+  </script>
+</body>
+</html>
